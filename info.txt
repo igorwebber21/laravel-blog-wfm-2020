@@ -1,0 +1,4 @@
+https://github.com/cviebrock/eloquent-sluggable  - laravel sluggable
+composer require cviebrock/eloquent-sluggable:^7.0
+
+
