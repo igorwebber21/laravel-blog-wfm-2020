@@ -2,3 +2,10 @@ https://github.com/cviebrock/eloquent-sluggable  - laravel sluggable
 composer require cviebrock/eloquent-sluggable:^7.0
 
 
+php artisan migrate:refresh - пересоздать все таблицы
+php artisan route:list
+php artisan make:request StoreCategory
+
+SoftDeleting - https://laravel.com/docs/7.x/eloquent#soft-deleting
+
+
