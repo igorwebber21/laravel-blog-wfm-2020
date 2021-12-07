@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 3 | Registration Page</title>
+    <title>AdminLTE 3 | Login Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -13,7 +13,7 @@
 <body class="hold-transition register-page">
 <div class="register-box">
     <div class="register-logo">
-        <b>Регистрация</b>
+        <b>Login</b>
     </div>
 
     <div class="card">
@@ -29,20 +29,17 @@
                 </div>
             @endif
 
-            <form action="{{ route('register.store') }}" method="post">
+            @if(session()->has('error'))
+                <div class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
+            @endif
+
+            <form action="{{ route('login') }}" method="post">
                 @csrf
 
                 <div class="input-group mb-3">
-                    <input type="text" name="name" class="form-control" placeholder="Name" value="{{ old('name') }}">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fas fa-user"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="input-group mb-3">
-                    <input type="email" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
+                    <input type="email" name="email" class="form-control" placeholder="Email">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-envelope"></span>
@@ -59,25 +56,14 @@
                     </div>
                 </div>
 
-                <div class="input-group mb-3">
-                    <input type="password" name="password_confirmation" class="form-control" placeholder="Retype password">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fas fa-lock"></span>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="row">
                     <!-- /.col -->
                     <div class="col-4 offset-8">
-                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
                     </div>
                     <!-- /.col -->
                 </div>
             </form>
-
-            <a href="{{ route('login') }}" class="text-center">I already have a membership</a>
         </div>
         <!-- /.form-box -->
     </div><!-- /.card -->
