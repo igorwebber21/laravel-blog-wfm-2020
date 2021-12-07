@@ -15,7 +15,8 @@ mix.styles([
     'resources/assets/admin/plugins/fontawesome-free/css/all.min.css',
     'resources/assets/admin/plugins/select2/css/select2.css',
     'resources/assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.css',
-    'resources/assets/admin/css/adminlte.min.css'
+    'resources/assets/admin/css/adminlte.min.css',
+    'resources/assets/admin/css/mystyles.css'
 ], 'public/assets/admin/css/admin.css');
 
 mix.scripts([
