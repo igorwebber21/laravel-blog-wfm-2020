@@ -32,9 +32,9 @@ Route::group(['middleware' => 'guest'], function(){
     Route::post('/login', 'UserController@login')->name('login');
 });
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', 'PostController@index')->name('home');
+Route::get('/article', 'PostController@show')->name('posts.single');
 
+Route::get('/logout', 'UserController@logout')->name('logout')->middleware('auth');
 Route::get('/logout', 'UserController@logout')->name('logout')->middleware('auth');
 

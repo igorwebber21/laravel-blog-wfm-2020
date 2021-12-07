@@ -11,3 +11,11 @@ SoftDeleting - https://laravel.com/docs/7.x/eloquent#soft-deleting
 php artisan make:migration change_users_table --table=users
 
 
+Удаление последнего коммита из локального репозитория + из GitHub
+https://www.youtube.com/watch?v=lVpLoUecZYY&ab_channel=TroubleChute - видео
+git reset --soft HEAD~1
+git push origin +master --force
+
+
+
+
