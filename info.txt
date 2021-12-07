@@ -8,4 +8,6 @@ php artisan make:request StoreCategory
 
 SoftDeleting - https://laravel.com/docs/7.x/eloquent#soft-deleting
 
+php artisan make:migration change_users_table --table=users
+
 
