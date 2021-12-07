@@ -14,12 +14,7 @@ class MainController extends Controller
     public function index()
     {
 
-        $tag = new Tag();
-        $tag->title = 'Привет мир';
-        $tag->save();
-        exit;
-
-        dd(Str::slug('Привет мир', '-'));
+       //dd(Str::slug('Привет мир', '-'));
         return view('admin.index');
     }
 }

@@ -1,7 +1,6 @@
 @extends('admin.layouts.layout')
 
 @section('content')
-    <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <div class="container-fluid">
@@ -37,7 +36,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    Start creating your amazing application!
+                    Админка на Laravel!
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
@@ -49,5 +48,4 @@
 
         </section>
         <!-- /.content -->
-    </div>
 @endsection
