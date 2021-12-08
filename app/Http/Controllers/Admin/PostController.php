@@ -19,7 +19,7 @@ class PostController extends Controller
     public function index()
     {
         //
-        $posts = Post::query()->with('category', 'tags')->paginate(2);
+        $posts = Post::query()->with('category', 'tags')->paginate(10);
        // dd($posts);
         return view('admin.posts.index', compact('posts'));
     }
@@ -99,7 +99,10 @@ class PostController extends Controller
 
         $data = $request->all();
 
-        $data['thumbnail'] = Post::uploadImage($request, $post->thumbnail);
+        if($file = Post::uploadImage($request, $post->thumbnail))
+        {
+            $data['thumbnail'] = $file;
+        }
 
         $post->update($data);
         $post->tags()->sync($request->tags);
