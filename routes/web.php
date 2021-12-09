@@ -33,7 +33,9 @@ Route::group(['middleware' => 'guest'], function(){
 });
 
 Route::get('/', 'PostController@index')->name('home');
-Route::get('/article', 'PostController@show')->name('posts.single');
+Route::get('/article/{slug}', 'PostController@show')->name('posts.single');
+Route::get('/category/{slug}', 'CategoryController@show')->name('categories.single');
+Route::get('/tag/{slug}', 'TagController@show')->name('tags.single');
 
 Route::get('/logout', 'UserController@logout')->name('logout')->middleware('auth');
 Route::get('/logout', 'UserController@logout')->name('logout')->middleware('auth');
