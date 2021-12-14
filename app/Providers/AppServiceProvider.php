@@ -29,7 +29,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         Schema::defaultStringLength(191);
-        view()->composer('layouts.sidebar', function($view){
+        view()->composer(['layouts.sidebar', 'layouts.layout', 'layouts.category_layout'], function($view){
 
             if (Cache::has('cats')) {
                 $cats = Cache::get('cats');
